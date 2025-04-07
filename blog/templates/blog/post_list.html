@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog sur Django</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href = "/">Blog sur Django</a></h1>
+        </header>
+        {%for post in posts%}
+            <article>
+                <h2><a href = "">{{ post.titre }}</a></h2>
+                <p>{{post.texte}}</p>
+                <time>published {{ post.published_date }}</time>
+            </article>
+        {%endfor%}
+    </body>
+</html>
